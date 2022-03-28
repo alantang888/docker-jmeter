@@ -11,7 +11,7 @@ ENV	JMETER_DOWNLOAD_URL  https://archive.apache.org/dist/jmeter/binaries/apache-
 
 # Install extra packages
 # Set TimeZone, See: https://github.com/gliderlabs/docker-alpine/issues/136#issuecomment-612751142
-ARG TZ="Europe/Amsterdam"
+ARG TZ="Etc/UTC"
 ENV TZ ${TZ}
 RUN    apk update \
 	&& apk upgrade \

@@ -1,3 +1,15 @@
+# This is fork from https://github.com/justb4/docker-jmeter.
+
+Changed for:
+1. Default timezone to UTC
+2. Change to use env var `MEMORY_LIMIT` to calculate free memory. (Pass by K8S container spec)
+
+Image: `alantang888/jmeter`
+
+Below is original readme.
+
+---
+
 [![Docker Build](https://github.com/justb4/docker-jmeter/actions/workflows/docker.yml/badge.svg)](https://github.com/justb4/docker-jmeter/actions/workflows/docker.yml)
 [![Patreon](https://img.shields.io/badge/patreon-donate-yellow.svg)](https://patreon.com/justb4)
 

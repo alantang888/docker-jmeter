@@ -15,7 +15,7 @@ fi
 
 # Execute JMeter command
 set -e
-freeMem=`awk '/MemAvailable/ { print int($2/1024) }' /proc/meminfo`
+freeMem=$(($MEMORY_LIMIT/1024/1024))
 s=$(($freeMem/10*8))
 x=$(($freeMem/10*8))
 n=$(($freeMem/10*2))
