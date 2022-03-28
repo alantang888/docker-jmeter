@@ -15,7 +15,11 @@ fi
 
 # Execute JMeter command
 set -e
-freeMem=$(($MEMORY_LIMIT/1024/1024))
+if [[ ! -z "${MEMORY_LIMIT}" ]]; then
+  freeMem=$(($MEMORY_LIMIT/1024/1024))
+else
+  freeMem=`awk '/MemAvailable/ { print int($2/1024) }' /proc/meminfo`
+fi
 s=$(($freeMem/10*8))
 x=$(($freeMem/10*8))
 n=$(($freeMem/10*2))
